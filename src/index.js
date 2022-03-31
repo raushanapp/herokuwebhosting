@@ -7,7 +7,7 @@ const cors = require("cors")
 
 // // console.log("expamle",app)
 // app.use(cors())
-// app.use(express.json());
+app.use(express.json());
 app.use("/users",userController)
 app.use("/post",postController);
 
