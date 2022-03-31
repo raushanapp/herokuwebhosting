@@ -35,6 +35,19 @@ router.patch("/:id",authenticate,async(req,res) =>{
 
 })
 
+router.get("/",async(req,res) =>{
+    
+  try{
+     const post = await Post.find().lean().exec();
+     return res.status(201).send({post:post});
+
+ }catch(err){
+   return res.status(500).send({message: err.message});
+
+ }
+
+})
+
 
 router.delete("/:id",authenticate,async(req,res) =>{
     
