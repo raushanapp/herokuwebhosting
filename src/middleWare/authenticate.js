@@ -7,7 +7,7 @@ const verifyToken = (token) =>{
 
   return new Promise((reslove,reject) =>{
 
-    jwt.verify(token, process.env.SECRET_KEY,(err,decoded)=>{
+    jwt.verify(token,"masaikey",(err,decoded)=>{
 
       if (err) return reject(err);
 
