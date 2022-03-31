@@ -2,8 +2,8 @@ const express = require("express");
 const userController = require("./controller/userController")
 const {register,login} = require("./controller/authenticationController")     // login and regiter password
 const postController = require("./controller/postController");
-const cors = require("cors")
-// const app = express();
+// const cors = require("cors")
+const app = express();
 
 // // console.log("expamle",app)
 // app.use(cors())
